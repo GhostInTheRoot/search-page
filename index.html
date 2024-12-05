@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GhostInTheRoot Search</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" type="x-icon" href="67278339.png">
+    <link id="themeStylesheet" rel="stylesheet" href="themes/dark.css">
+    <meta name="description" content="Let's search something....">
+    <script src="scripts/theme.js"></script>
+    <script>
+        // JavaScript code to set random background image and phrase.
+        window.addEventListener("DOMContentLoaded", function () {
+            var phrases = [
+                "The only limit to our realization of tomorrow is our doubts of today – Franklin D. Roosevelt",
+                "Don’t watch the clock; do what it does. Keep going – Sam Levenson",
+                "Success is not the key to happiness. Happiness is the key to success – Albert Schweitzer",
+                "You miss 100% of the shots you don’t take – Wayne Gretzky",
+                "What lies behind us and what lies before us are tiny matters compared to what lies within us – Ralph Waldo Emerson",
+                "The best way to predict your future is to create it – Abraham Lincoln",
+                "It does not matter how slowly you go as long as you do not stop – Confucius",
+                "Dream big and dare to fail – Norman Vaughan",
+                "Opportunities don’t happen, you create them – Chris Grosser",
+                "The journey of a thousand miles begins with one step – Lao Tzu",
+                "In the middle of every difficulty lies opportunity – Albert Einstein",
+                "Success usually comes to those who are too busy to be looking for it – Henry David Thoreau",
+                "It always seems impossible until it’s done – Nelson Mandela",
+                "Believe you can and you’re halfway there – Theodore Roosevelt",
+                "Your time is limited, so don’t waste it living someone else’s life – Steve Jobs",
+                "Hardships often prepare ordinary people for an extraordinary destiny – C.S. Lewis",
+                "Do what you can, with what you have, where you are – Theodore Roosevelt",
+                "Happiness is not something ready-made. It comes from your own actions – Dalai Lama",
+                "If you are going through hell, keep going – Winston Churchill",
+                "To handle yourself, use your head; to handle others, use your heart – Eleanor Roosevelt",
+                "Start where you are. Use what you have. Do what you can – Arthur Ashe",
+                "Success is walking from failure to failure with no loss of enthusiasm – Winston Churchill",
+                "Be the change that you wish to see in the world – Mahatma Gandhi",
+                "Don’t limit your challenges. Challenge your limits – Anonymous",
+                "Act as if what you do makes a difference. It does – William James",
+                "With the new day comes new strength and new thoughts – Eleanor Roosevelt",
+                "The future belongs to those who believe in the beauty of their dreams – Eleanor Roosevelt",
+                "Courage is not having the strength to go on; it is going on when you don’t have the strength – Theodore Roosevelt",
+                "Keep your face always toward the sunshine, and shadows will fall behind you – Walt Whitman",
+                "The greatest glory in living lies not in never falling, but in rising every time we fall – Nelson Mandela"
+            ];
+
+            if (phrases.length > 0) {
+                var randomPhraseIndex = Math.floor(Math.random() * phrases.length);
+                var randomPhrase = phrases[randomPhraseIndex];
+                document.querySelector(".phrase").textContent = randomPhrase;
+                document.querySelector(".phrase").style.display = "block";
+            } else {
+                console.warn("The phrases array is empty.");
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <form action="https://duckduckgo.com/">
+            <input class="search_bar_item search_bar" type="text" name="q" placeholder="Search something...">
+            <input class="search_bar_item search_button" type="submit" value="  ">
+        </form>
+    </div>
+
+    <div class="phrase_container">
+        <p class="phrase"></p>
+    </div>
+</body>
+</html>
